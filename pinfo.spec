@@ -26,7 +26,7 @@ make SPEEDOPTIMIZE="$RPM_OPT_FLAGS"
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{man/man1,bin}
 
-install -s pinfo $RPM_BUILD_ROOT/usr/bin
+install -s pinfo $RPM_BUILD_ROOT%{_bindir}
 install	 pinfo.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/* \
@@ -38,7 +38,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {ACKNOWLEDGEMENTS,CHANGELOG,TODO,TECHSTUFF,README,PORTING}.gz
-%attr(755,root,root) /usr/bin/pinfo
+%attr(755,root,root) %{_bindir}/pinfo
 %{_mandir}/man1/*
 
 %changelog
