@@ -1,7 +1,7 @@
 Summary:	Lynx-style info browser
 Summary(pl):	Przêgl±darka info w stylu lynx'a
 Name:		pinfo
-Version:	0.2.4
+Version:	0.3.1
 Release:	1
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
@@ -40,6 +40,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man1
 
 %changelog
+* Mon Mar 23 1999 Micha³ Kuratczyk <kura@pld.org.pl>
+  [0.3.1-1]
+- upgraded to 0.3.1
+
 * Sun Mar 21 1999 Micha³ Kuratczyk <kura@pld.org.pl>
   [0.2.4-1]
 - upgraded to 0.2.4
