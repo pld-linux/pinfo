@@ -1,7 +1,7 @@
 Summary:	Lynx-style info browser
 Summary(pl):	Przêgl±darka info w stylu lynx'a
 Name:		pinfo
-Version:	0.3.1
+Version:	0.3.5
 Release:	1
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
@@ -20,7 +20,7 @@ Pinfo jest przegl±dark± dokumentów info podobn± do lynx'a.
 %setup -q
 
 %build
-make
+make SPEEDOPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -40,6 +40,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man1
 
 %changelog
+* Thu Mar 25 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [0.3.5-1]
+- fixed passing $RPM_OPT_FLAGS.
+
 * Mon Mar 23 1999 Micha³ Kuratczyk <kura@pld.org.pl>
   [0.3.1-1]
 - upgraded to 0.3.1
