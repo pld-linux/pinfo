@@ -1,8 +1,8 @@
-Summary:	Lynx-style info browser
-Summary(pl):	Przêgl±darka info w stylu lynx'a
+Summary:	Lynx-style info and man browser
+Summary(pl):	Przêgl±darka info i manuali w stylu lynx'a
 Name:		pinfo
-Version:	0.3.5
-Release:	1
+Version:	0.3.7
+Release:	2
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 Copyright:	GPL
@@ -11,10 +11,10 @@ Source:		http://zeus.polsl.gliwice.pl/~pborys/%{name}-%{version}.tar.gz
 BuildRoot:   	/tmp/%{name}-%{version}-root
 
 %description
-Pinfo is a curses based lynx-style info browser.
+Pinfo is a curses based lynx-style info and man browser.
 
 %description -l pl
-Pinfo jest przegl±dark± dokumentów info podobn± do lynx'a.
+Pinfo jest przegl±dark± dokumentów info i stron man podobn± do lynx'a.
 
 %prep
 %setup -q
@@ -30,16 +30,23 @@ install -s pinfo $RPM_BUILD_ROOT/usr/bin
 install	 pinfo.1 $RPM_BUILD_ROOT/usr/man/man1
 
 gzip -9nf $RPM_BUILD_ROOT/usr/man/man*/*
+gzip -9nf ACKNOWLEDGEMENTS CHANGELOG TODO TECHSTUFF README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc {ACKNOWLEDGEMENTS,CHANGELOG,TODO,TECHSTUFF,README}.gz
 %attr(755,root,root) /usr/bin/pinfo
 /usr/man/man1
 
 %changelog
+* Sun Mar 28 1999 Micha³ Kuratczyk <kura@pld.org.pl>
+  [0.3.7-2]
+- upgraded to 0.3.7
+- added (gzipped) documentation
+
 * Thu Mar 25 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [0.3.5-1]
 - fixed passing $RPM_OPT_FLAGS.
