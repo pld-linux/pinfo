@@ -8,7 +8,7 @@ Group(pl):	Narzêdzia/System
 Copyright:	GPL
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
 Source:		http://zeus.polsl.gliwice.pl/~pborys/%{name}-%{version}.tar.gz
-BuildRoot:   	/tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 Pinfo is a curses based lynx-style info and man browser.
