@@ -16,6 +16,7 @@ Source1:	%{name}.sh
 Source2:	%{name}.csh
 Patch0:		%{name}-amfix.patch
 Patch1:		%{name}-info.patch
+Patch2:		%{name}-po.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	ncurses-devel >= 5.0
@@ -50,6 +51,7 @@ Pinfo - це програма перегляду info-файл╕в та man-стор╕нок. ╥╖
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__aclocal} -I macros
