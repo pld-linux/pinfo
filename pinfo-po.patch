@@ -7,7 +7,7 @@
 -# , fuzzy
  msgid ""
  msgstr ""
- "POT-Creation-Date: 2002-07-14 19:54+0200\n"
+ "POT-Creation-Date: 2003-02-12 21:21+0100\n"
 +"PO-Revision-Date: 1999-04-21 01:50+0200\n"
 +"Last-Translator: UNKNOWN\n"
 +"Language-Team: Polish\n"
@@ -17,15 +17,10 @@
  
 --- pinfo-0.6.6p1/po/ru.po~	Mon Sep  8 14:45:45 2003
 +++ pinfo-0.6.6p1/po/ru.po	Mon Sep  8 14:45:45 2003
-@@ -2,12 +2,11 @@
- # Copyright (C) YEAR Free Software Foundation, Inc.
- # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
- #
--#, fuzzy
- msgid ""
+@@ -6,7 +6,7 @@
  msgstr ""
  "Project-Id-Version: 0.5.3\n"
- "POT-Creation-Date: 2002-07-14 19:54+0200\n"
+ "POT-Creation-Date: 2003-02-12 21:21+0100\n"
 -"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 +"PO-Revision-Date: 1999-04-21 01:50+0200\n"
  "Last-Translator: Volosenkov Dmitry <_bil_@mail.ru>\n"
@@ -40,7 +35,7 @@
 -# , fuzzy
  msgid ""
  msgstr ""
- "POT-Creation-Date: 2002-07-14 19:54+0200\n"
+ "POT-Creation-Date: 2003-02-12 21:21+0100\n"
 +"PO-Revision-Date: 1999-04-21 01:50+0200\n"
 +"Last-Translator: UNKNOWN\n"
 +"Language-Team: Swedish\n"
