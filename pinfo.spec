@@ -11,7 +11,7 @@ License:	GPL
 Group:		Applications/System
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
 Source0:	http://zeus.polsl.gliwice.pl/~pborys/stable-version/%{name}-%{version}.tar.gz
-# Source0-md5: d0ac823aa8fe528ed54004d022cb0896
+# Source0-md5:	d0ac823aa8fe528ed54004d022cb0896
 Source1:	%{name}.sh
 Source2:	%{name}.csh
 Patch0:		%{name}-amfix.patch
