@@ -63,12 +63,12 @@ Pinfo - це програма перегляду info-файл╕в та man-стор╕нок. ╥╖
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/profile.d
+install -d $RPM_BUILD_ROOT/etc/profile.d
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/profile.d/%{name}.sh
-install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/profile.d/%{name}.csh
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/profile.d/%{name}.sh
+install %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d/%{name}.csh
 
 %find_lang %{name}
 
@@ -85,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS AUTHORS README
 %attr(755,root,root) %{_bindir}/pinfo
-%attr(755,root,root) %{_sysconfdir}/profile.d/*
+%attr(755,root,root) /etc/profile.d/*
 %config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/pinforc
 %{_mandir}/man1/*
 %{_infodir}/pinfo*
