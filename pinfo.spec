@@ -4,7 +4,7 @@ Summary(pl):	Przêgl±darka info w stylu lynksa
 Summary(pt_BR):	Visualizador de páginas info e man
 Name:		pinfo
 Version:	0.6.5
-Release:	1.2
+Release:	2
 License:	GPL
 Group:		Applications/System
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
