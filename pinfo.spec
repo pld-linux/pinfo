@@ -40,8 +40,8 @@ regulares.
 
 %build
 aclocal -I macros
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure \
 	--without-included-gettext
 
