@@ -4,7 +4,7 @@ Summary(pl):	Przêgl±darka info w stylu lynksa
 Summary(pt_BR):	Visualizador de páginas info e man
 Name:		pinfo	
 Version:	0.6.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
@@ -40,7 +40,7 @@ regulares.
 %build
 aclocal -I macros
 autoconf
-automake -a -c
+automake -a -c -f
 %configure \
 	--without-included-gettext
 	
