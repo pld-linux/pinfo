@@ -1,6 +1,6 @@
 Summary:	Lynx-style info browser
 Summary(es):	Visualizador de pАginas info y man
-Summary(pl):	PrzЙgl╠darka info w stylu lynksa
+Summary(pl):	Przegl╠darka info w stylu lynksa
 Summary(pt_BR):	Visualizador de pАginas info e man
 Summary(ru):	Программа просмотра info- и man-документов в стиле lynx
 Summary(uk):	Програма перегляду info- та man-документ╕в у стил╕ lynx
