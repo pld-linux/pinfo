@@ -53,7 +53,7 @@ Pinfo - це програма перегляду info-файл╕в та man-стор╕нок. ╥╖
 %patch1 -p1
 
 %build
-aclocal -I macros
+%{__aclocal} -I macros
 %{__autoconf}
 %{__automake}
 %configure \
