@@ -1,0 +1,50 @@
+--- pinfo-0.6.6p1/po/pl.po~	Mon Sep  8 14:45:44 2003
++++ pinfo-0.6.6p1/po/pl.po	Mon Sep  8 14:45:44 2003
+@@ -1,10 +1,13 @@
+ # pinfo polish language module
+ #
+ # strings for the header-filter of info messages
+-# , fuzzy
+ msgid ""
+ msgstr ""
+ "POT-Creation-Date: 2002-07-14 19:54+0200\n"
++"PO-Revision-Date: 1999-04-21 01:50+0200\n"
++"Last-Translator: UNKNOWN\n"
++"Language-Team: Polish\n"
++"MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=ISO-8859-2\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+--- pinfo-0.6.6p1/po/ru.po~	Mon Sep  8 14:45:45 2003
++++ pinfo-0.6.6p1/po/ru.po	Mon Sep  8 14:45:45 2003
+@@ -2,12 +2,11 @@
+ # Copyright (C) YEAR Free Software Foundation, Inc.
+ # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+ #
+-#, fuzzy
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: 0.5.3\n"
+ "POT-Creation-Date: 2002-07-14 19:54+0200\n"
+-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
++"PO-Revision-Date: 1999-04-21 01:50+0200\n"
+ "Last-Translator: Volosenkov Dmitry <_bil_@mail.ru>\n"
+ "Language-Team: russian <ru@li.org>\n"
+ "MIME-Version: 1.0\n"
+--- pinfo-0.6.6p1/po/sv.po~	Mon Sep  8 14:45:44 2003
++++ pinfo-0.6.6p1/po/sv.po	Mon Sep  8 14:45:44 2003
+@@ -1,10 +1,13 @@
+ # pinfo Swedish language module
+ #
+ # strings for the header-filter of info messages
+-# , fuzzy
+ msgid ""
+ msgstr ""
+ "POT-Creation-Date: 2002-07-14 19:54+0200\n"
++"PO-Revision-Date: 1999-04-21 01:50+0200\n"
++"Last-Translator: UNKNOWN\n"
++"Language-Team: Swedish\n"
++"MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=ISO-8859-1\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
