@@ -10,13 +10,14 @@ Release:	2
 License:	GPL
 Group:		Applications/System
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
-Source0:	http://zeus.polsl.gliwice.pl/~pborys/stable-version/%{name}-%{version}.tar.gz
+Source0:	http://dione.ids.pl/~pborys/software/pinfo/%{name}-%{version}.tar.gz
 # Source0-md5:	d0ac823aa8fe528ed54004d022cb0896
 Source1:	%{name}.sh
 Source2:	%{name}.csh
 Patch0:		%{name}-amfix.patch
 Patch1:		%{name}-info.patch
 Patch2:		%{name}-po.patch
+URL:		http://dione.ids.pl/~pborys/software/pinfo/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	ncurses-devel >= 5.0
