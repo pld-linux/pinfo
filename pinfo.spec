@@ -7,19 +7,6 @@ Version:	0.6.5
 Release:	1
 License:	GPL
 Group:		Applications/System
-Group(cs):	Aplikace/Systém
-Group(da):	Programmer/System
-Group(de):	Applikationen/System
-Group(es):	Aplicaciones/Sistema
-Group(fr):	Applications/Système
-Group(it):	Applicazioni/Sistema
-Group(ja):	¥¢¥×¥ê¥±¡¼¥·¥ç¥ó/¥·¥¹¥Æ¥à
-Group(no):	Applikasjoner/System
-Group(pl):	Aplikacje/System
-Group(pt):	Aplicações/Sistema
-Group(pt_BR):	Aplicações/Sistema
-Group(ru):	ğÒÉÌÏÖÅÎÉÑ/óÉÓÔÅÍÁ
-Group(sv):	Tillämpningar/System
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
 Source0:	http://zeus.polsl.gliwice.pl/~pborys/stable-version/%{name}-%{version}.tar.gz
 Patch0:		%{name}-amfix.patch
