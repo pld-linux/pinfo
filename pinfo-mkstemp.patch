@@ -1,0 +1,131 @@
+--- pinfo-0.6.0/src/manual.c.mkstemp	Wed Aug  2 14:14:21 2000
++++ pinfo-0.6.0/src/manual.c	Wed Aug  2 14:25:11 2000
+@@ -168,13 +168,18 @@
+   size_t macroline_size;
+   int ignored_items = 0, i = 0;
+   char zipped = 0;
++  char tempbuf[PATH_MAX] = "/tmp/pinfoXXXXXX";
++  int fd;
+ 
+   if (tmpfilename1)
+     {
+       unlink (tmpfilename1);
+       xfree (tmpfilename1);
+     }
+-  tmpfilename1 = tempnam ("/tmp", NULL);
++  fd = mkstemp(tempbuf);
++  fchmod(fd, S_IRUSR | S_IWUSR);
++  close(fd);
++  tmpfilename1 = strdup(tempbuf);
+ 
+ #ifdef getmaxyx
+   init_curses ();
+@@ -199,6 +204,8 @@
+   if (ignoredmacros)		/* if the pointer is non-null */
+     if (*ignoredmacros && strlen (ignoredmacros))	/* if there are some macros */
+       {				/* that should be ignored   */
++        char tempbuf[PATH_MAX] = "/tmp/pinfoXXXXXX";
++        int fd;
+ 	*location = '\0';
+ 	snprintf (cmd, 255, "man -W %s %s",	/* we need to know the path */
+ 		  ManOptions,
+@@ -268,9 +275,11 @@
+ 	  }
+ 	else
+ 	  source = fopen (location, "r");	/* from cmd output  */
+-	name = tempnam ("/tmp", NULL);
++	fd = mkstemp(tempbuf);
++        fchmod(fd, S_IRUSR | S_IWUSR);
++	name = strdup(tempbuf);
+ 	raw_tempfilename = name;
+-	id = fopen (name, "w");
++	id = fdopen (fd, "w");
+ 
+ 	while (!feof (source))	/* we read until eof */
+ 	  {
+@@ -370,12 +379,17 @@
+       manual_aftersearch = 0;
+       if (return_value != -1)	/* -1 is quit key */
+ 	{
++          char tempbuf[PATH_MAX] = "/tmp/pinfoXXXXXX";
++          int fd;
+ 	  if (tmpfilename2)
+ 	    {
+ 	      unlink (tmpfilename2);
+ 	      xfree (tmpfilename2);
+ 	    }
+-	  tmpfilename2 = tempnam ("/tmp", NULL);
++	  fd = mkstemp(tempbuf);
++	  fchmod(fd, S_IRUSR | S_IWUSR);
++          close(fd);
++	  tmpfilename2 = strdup(tempbuf);
+ 	  if (return_value != -2)	/* key_back is not pressed;
+ 					   and return_value is an
+ 					   offset to manuallinks */
+--- pinfo-0.6.0/src/filehandling_functions.c.mkstemp	Wed Aug  2 14:14:26 2000
++++ pinfo-0.6.0/src/filehandling_functions.c	Wed Aug  2 14:25:42 2000
+@@ -452,12 +452,17 @@
+ 
+   if (number == 0)		/* initialize tmp filename for file 1 */
+     {
++      char tmpbuf[PATH_MAX] = "/tmp/pinfoXXXXXX";
++      int fd;
+       if (tmpfilename1)
+ 	{
+ 	  unlink (tmpfilename1);	/* erase old tmpfile */
+ 	  free (tmpfilename1);
+ 	}
+-      tmpfilename1 = tempnam ("/tmp", NULL);
++      fd = mkstemp(tmpbuf);
++      fchmod(fd, S_IRUSR | S_IWUSR);
++      close(fd);
++      tmpfilename1 = strdup(tmpbuf);
+       tmpfilename = tmpfilename1;	/* later we will refere only to tmp1 */
+     }
+   for (i = 0; i < infopathcount; i++)	/* go through all paths */
+@@ -601,23 +606,33 @@
+ 
+   if (number == 0)		/* initialize tmp filename for file 1 */
+     {
++      char tmpbuf[PATH_MAX] = "/tmp/pinfoXXXXXX";
++      int fd;
+       if (tmpfilename1)
+ 	{
+ 	  unlink (tmpfilename1);	/* erase old tmpfile */
+ 	  free (tmpfilename1);
+ 	}
+-      tmpfilename1 = tempnam ("/tmp", NULL);
++      fd = mkstemp(tmpbuf);
++      fchmod(fd, S_IRUSR | S_IWUSR);
++      close(fd);
++      tmpfilename1 = strdup(tmpbuf);
+       tmpfilename = tmpfilename1;	/* later we will refere only to tmp1 */
+     }
+   else
+     /* initialize tmp filename for file 2 */
+     {
++      char tmpbuf[PATH_MAX] = "/tmp/pinfoXXXXXX";
++      int fd;
+       if (tmpfilename2)
+ 	{
+ 	  unlink (tmpfilename2);	/* erase old tmpfile */
+ 	  free (tmpfilename2);
+ 	}
+-      tmpfilename2 = tempnam ("/tmp", NULL);
++      fd = mkstemp(tmpbuf);
++      fchmod(fd, S_IRUSR | S_IWUSR);
++      close(fd);
++      tmpfilename2 = strdup(tmpbuf);
+       tmpfilename = tmpfilename2;	/* later we will refere only to tmp2 */
+     }
+ 
+--- pinfo-0.6.0/src/common_includes.h.mkstemp	Wed Aug  2 14:22:04 2000
++++ pinfo-0.6.0/src/common_includes.h	Wed Aug  2 14:22:15 2000
+@@ -14,6 +14,7 @@
+ #include <stdlib.h>
+ #include <signal.h>
+ #include <unistd.h>
++#include <limits.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <pwd.h>

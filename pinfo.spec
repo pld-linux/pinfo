@@ -5,21 +5,23 @@ Summary(pt_BR):	Visualizador de pАginas info e man
 Summary(ru):	Программа просмотра info- и man-документов в стиле lynx
 Summary(uk):	Програма перегляду info- та man-документ╕в у стил╕ lynx
 Name:		pinfo
-Version:	0.6.7
-Release:	2
+Version:	0.6.8
+Release:	1
 License:	GPL
 Group:		Applications/System
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
 Source0:	http://dione.ids.pl/~pborys/software/pinfo/%{name}-%{version}.tar.gz
-# Source0-md5:	d0ac823aa8fe528ed54004d022cb0896
+# Source0-md5:	55feb4ebaa709b52bd00a15ed0fb52fb
 Source1:	%{name}.sh
 Source2:	%{name}.csh
 Patch0:		%{name}-amfix.patch
 Patch1:		%{name}-info.patch
 Patch2:		%{name}-po.patch
+Patch3:		%{name}-mkstemp.patch
 URL:		http://dione.ids.pl/~pborys/software/pinfo/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	ncurses-devel >= 5.0
 Requires:	man-config
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -53,8 +55,10 @@ Pinfo - це програма перегляду info-файл╕в та man-стор╕нок. ╥╖
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
+%{__gettextize}
 %{__aclocal} -I macros
 %{__autoconf}
 %{__automake}
