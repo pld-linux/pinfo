@@ -4,11 +4,13 @@ Summary(pl):	Przêgl±darka info w stylu lynksa
 Summary(pt_BR):	Visualizador de páginas info e man
 Name:		pinfo
 Version:	0.6.5
-Release:	1
+Release:	1.1
 License:	GPL
 Group:		Applications/System
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
 Source0:	http://zeus.polsl.gliwice.pl/~pborys/stable-version/%{name}-%{version}.tar.gz
+Source1:	%{name}.sh
+Source2:	%{name}.csh
 Patch0:		%{name}-amfix.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -49,6 +51,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/profile.d
+install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/profile.d/%{name}.sh
+install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/profile.d/%{name}.csh
+
 gzip -9nf ChangeLog NEWS AUTHORS README
 
 %find_lang %{name}
@@ -60,6 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/pinfo
+%attr(755,root,root) %{_sysconfdir}/profile.d/*
 %config %verify(not md5 size mtime) %{_sysconfdir}/pinforc
 
 %{_mandir}/man1/*
