@@ -2,7 +2,7 @@ Summary:	Lynx-style info browser
 Summary(es):	Visualizador de páginas info y man
 Summary(pl):	Przêgl±darka info w stylu lynksa
 Summary(pt_BR):	Visualizador de páginas info e man
-Name:		pinfo	
+Name:		pinfo
 Version:	0.6.5
 Release:	1
 License:	GPL
@@ -41,8 +41,8 @@ autoconf
 automake -a -c -f
 %configure \
 	--without-included-gettext
-	
-%{__make} 
+
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
