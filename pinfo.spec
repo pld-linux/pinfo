@@ -2,6 +2,8 @@ Summary:	Lynx-style info browser
 Summary(es):	Visualizador de pАginas info y man
 Summary(pl):	PrzЙgl╠darka info w stylu lynksa
 Summary(pt_BR):	Visualizador de pАginas info e man
+Summary(ru):	Программа просмотра info- и man-документов в стиле lynx
+Summary(uk):	Програма перегляду info- та man-документ╕в у стил╕ lynx
 Name:		pinfo
 Version:	0.6.6p1
 Release:	1
@@ -34,6 +36,16 @@ Pinfo jest przegl╠dark╠ dokumentСw info podobn╠ do lynksa.
 Visualizador hipertexto de arquivos info e pАginas de manual, com
 interface semelhante ao lynx. Suporta pesquisa de expressУes
 regulares.
+
+%description -l ru
+Pinfo - это программа просмотра info-файлов и man-страниц. Ее
+интерфейс пользователя похож на интерфейс Lynx. Поддерживается поиск
+по регулярным выражениям.
+
+%description -l uk
+Pinfo - це програма перегляду info-файл╕в та man-стор╕нок. ╥╖
+╕нтерфейс под╕бний до ╕нтерфейсу Lynx. П╕дтриму╓ться пошук по
+регулярним виразам.
 
 %prep
 %setup -q
