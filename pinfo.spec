@@ -1,7 +1,7 @@
 Summary:	Lynx-style info and man browser
 Summary(pl):	Przêgl±darka info i manuali w stylu lynx'a
 Name:		pinfo
-Version:	0.3.7
+Version:	0.3.9
 Release:	2
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
@@ -30,18 +30,22 @@ install -s pinfo $RPM_BUILD_ROOT/usr/bin
 install	 pinfo.1 $RPM_BUILD_ROOT/usr/man/man1
 
 gzip -9nf $RPM_BUILD_ROOT/usr/man/man*/*
-gzip -9nf ACKNOWLEDGEMENTS CHANGELOG TODO TECHSTUFF README
+gzip -9nf ACKNOWLEDGEMENTS CHANGELOG TODO TECHSTUFF README PORTING
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {ACKNOWLEDGEMENTS,CHANGELOG,TODO,TECHSTUFF,README}.gz
+%doc {ACKNOWLEDGEMENTS,CHANGELOG,TODO,TECHSTUFF,README,PORTING}.gz
 %attr(755,root,root) /usr/bin/pinfo
 /usr/man/man1
 
 %changelog
+* Sun Mar 28 1999 Micha³ Kuratczyk <kura@pld.org.pl>
+  [0.3.9-2]
+- upgraded to 0.3.9
+
 * Sun Mar 28 1999 Micha³ Kuratczyk <kura@pld.org.pl>
   [0.3.7-2]
 - upgraded to 0.3.7
