@@ -1,7 +1,7 @@
 Summary:	Lynx-style info browser
 Summary(pl):	Przêgl±darka info w stylu lynx'a
 Name:		pinfo	
-Version:	0.6.2
+Version:	0.6.3
 Release:	1
 Group:		Applications/System
 Group(de):	Applikationen/System
