@@ -22,8 +22,6 @@ BuildRequires:	ncurses-devel >= 5.0
 Requires:	man-config
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_sysconfdir	/etc
-
 %description
 Pinfo is a curses based lynx-style info browser.
 
@@ -66,7 +64,8 @@ Pinfo - це програма перегляду info-файл╕в та man-стор╕нок. ╥╖
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/etc/profile.d
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/profile.d/%{name}.sh
 install %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d/%{name}.csh
