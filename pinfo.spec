@@ -24,7 +24,6 @@ Pinfo jest przegl±dark± dokumentów info podobn± do lynx'a.
 %build
 LDFLAGS="-s"; export LDFLAGS
 %configure \
-	--sysconfdir=/etc \
 	--without-included-gettext
 	
 make 
