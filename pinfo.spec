@@ -9,7 +9,7 @@ Copyright:	GPL
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
 Source:		http://zeus.polsl.gliwice.pl/~pborys/stable-version/%{name}-%{version}.tar.gz
 BuildRequires:	ncurses-devel >= 5.0
-BuildRoot:   	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc
 
