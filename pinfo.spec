@@ -6,7 +6,7 @@ Summary(ru):	Программа просмотра info- и man-документов в стиле lynx
 Summary(uk):	Програма перегляду info- та man-документ╕в у стил╕ lynx
 Name:		pinfo
 Version:	0.6.8
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
@@ -25,6 +25,7 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	ncurses-devel >= 5.0
 Requires:	man-config
+Requires:       setup >= 2.4.6-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -71,13 +72,13 @@ Pinfo - це програма перегляду info-файл╕в та man-стор╕нок. ╥╖
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/etc/profile.d
+install -d $RPM_BUILD_ROOT/etc/shrc.d
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/profile.d/%{name}.sh
-install %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d/%{name}.csh
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/shrc.d/%{name}.sh
+install %{SOURCE2} $RPM_BUILD_ROOT/etc/shrc.d/%{name}.csh
 
 %find_lang %{name}
 
@@ -94,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS AUTHORS README
 %attr(755,root,root) %{_bindir}/pinfo
-%attr(755,root,root) /etc/profile.d/*
+%attr(755,root,root) /etc/shrc.d/*
 %config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/pinforc
 %{_mandir}/man1/*
 %{_infodir}/pinfo*
