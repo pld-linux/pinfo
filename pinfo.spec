@@ -3,12 +3,23 @@ Summary(es):	Visualizador de p·ginas info y man
 Summary(pl):	PrzÍgl±darka info w stylu lynksa
 Summary(pt_BR):	Visualizador de p·ginas info e man
 Name:		pinfo	
-Version:	0.6.4
-Release:	2
+Version:	0.6.5
+Release:	1
 License:	GPL
 Group:		Applications/System
+Group(cs):	Aplikace/SystÈm
+Group(da):	Programmer/System
 Group(de):	Applikationen/System
+Group(es):	Aplicaciones/Sistema
+Group(fr):	Applications/SystËme
+Group(it):	Applicazioni/Sistema
+Group(ja):	•¢•◊•Í•±°º•∑•Á•Û/•∑•π•∆•‡
+Group(no):	Applikasjoner/System
 Group(pl):	Aplikacje/System
+Group(pt):	AplicaÁıes/Sistema
+Group(pt_BR):	AplicaÁıes/Sistema
+Group(ru):	“…Ãœ÷≈Œ…—/Û…”‘≈Õ¡
+Group(sv):	Till‰mpningar/System
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
 Source0:	http://zeus.polsl.gliwice.pl/~pborys/stable-version/%{name}-%{version}.tar.gz
 Patch0:		%{name}-amfix.patch
