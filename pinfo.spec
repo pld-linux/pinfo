@@ -6,7 +6,7 @@ Summary(ru):	Программа просмотра info- и man-документов в стиле lynx
 Summary(uk):	Програма перегляду info- та man-документ╕в у стил╕ lynx
 Name:		pinfo
 Version:	0.6.6p1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
@@ -63,10 +63,10 @@ aclocal -I macros
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/profile.d
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/profile.d
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/profile.d/%{name}.sh
 install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/profile.d/%{name}.csh
 
@@ -88,4 +88,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_sysconfdir}/profile.d/*
 %config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/pinforc
 %{_mandir}/man1/*
-%{_infodir}/*
+%{_infodir}/pinfo*
