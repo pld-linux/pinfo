@@ -1,0 +1,14 @@
+--- pinfo-0.6.6p1/doc/pinfo.texi.orig	Wed Feb  6 20:25:49 2002
++++ pinfo-0.6.6p1/doc/pinfo.texi	Fri Jul 26 22:37:58 2002
+@@ -43,9 +43,9 @@
+ 
+ @end titlepage
+ 
+-@dircategory Texinfo
++@dircategory Texinfo documentation system:
+ @direntry
+-* Pinfo: (pinfo).           curses based lynx-style info browser.
++* Pinfo: (pinfo).			curses based lynx-style info browser
+ @end direntry
+ 
+ @node Top, Invoking, (dir), (dir)
