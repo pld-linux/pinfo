@@ -29,8 +29,8 @@ install -d $RPM_BUILD_ROOT/usr/{man/man1,bin}
 install -s pinfo $RPM_BUILD_ROOT/usr/bin
 install	 pinfo.1 $RPM_BUILD_ROOT/usr/man/man1
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man*/*
-gzip -9nf ACKNOWLEDGEMENTS CHANGELOG TODO TECHSTUFF README PORTING
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man*/* \
+	ACKNOWLEDGEMENTS CHANGELOG TODO TECHSTUFF README PORTING
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -39,7 +39,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {ACKNOWLEDGEMENTS,CHANGELOG,TODO,TECHSTUFF,README,PORTING}.gz
 %attr(755,root,root) /usr/bin/pinfo
-/usr/man/man1
+/usr/man/man1/*
 
 %changelog
 * Sun Mar 28 1999 Micha³ Kuratczyk <kura@pld.org.pl>
