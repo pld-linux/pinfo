@@ -2,13 +2,14 @@ Summary:	Lynx-style info browser
 Summary(pl):	Przêgl±darka info w stylu lynx'a
 Name:		pinfo	
 Version:	0.5.9
-Release:	2
+Release:	3
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
-Copyright:	GPL
+License:	GPL
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
-Source:		http://zeus.polsl.gliwice.pl/~pborys/stable-version/%{name}-%{version}.tar.gz
+Source0:	http://zeus.polsl.gliwice.pl/~pborys/stable-version/%{name}-%{version}.tar.gz
 BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc
@@ -23,6 +24,7 @@ Pinfo jest przegl±dark± dokumentów info podobn± do lynx'a.
 %setup -q
 
 %build
+gettextize --copy --force
 LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--without-included-gettext
