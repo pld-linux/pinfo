@@ -2,12 +2,13 @@ Summary:	Lynx-style info browser
 Summary(pl):	Przêgl±darka info w stylu lynx'a
 Name:		pinfo	
 Version:	0.5.9
-Release:	1
+Release:	2
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 Copyright:	GPL
 Vendor:		Przemek Borys <pborys@dione.ids.pl>
 Source:		http://zeus.polsl.gliwice.pl/~pborys/stable-version/%{name}-%{version}.tar.gz
+BuildRequires:	ncurses-devel >= 5.0
 BuildRoot:   	/tmp/%{name}-%{version}-root
 
 %define		_sysconfdir	/etc
