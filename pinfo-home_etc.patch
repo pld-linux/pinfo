@@ -1,7 +1,7 @@
-diff -Nru pinfo-0.6.8.orig/doc/pinfo.1 pinfo-0.6.8/doc/pinfo.1
---- pinfo-0.6.8.orig/doc/pinfo.1	Thu Aug 21 11:20:06 2003
-+++ pinfo-0.6.8/doc/pinfo.1	Thu Oct 16 07:48:48 2003
-@@ -132,7 +132,7 @@
+diff -ur pinfo-0.6.9.org/doc/pinfo.1 pinfo-0.6.9/doc/pinfo.1
+--- pinfo-0.6.9.org/doc/pinfo.1	2006-03-16 17:27:56.000000000 +0100
++++ pinfo-0.6.9/doc/pinfo.1	2006-03-18 19:21:54.315546250 +0100
+@@ -133,7 +133,7 @@
  
  .SH COLOR AND KEY DEFINITIONS
  .P
@@ -10,10 +10,10 @@ diff -Nru pinfo-0.6.8.orig/doc/pinfo.1 pinfo-0.6.8/doc/pinfo.1
  [prefix]/etc/pinforc, for local and global configuration (where prefix is the
  prefix of the directory, where pinfo is installed, i.e. /usr/local, or /).
  Here's an example of such a file; we'll discuss the contents below:
-diff -Nru pinfo-0.6.8.orig/doc/pinfo.1.in pinfo-0.6.8/doc/pinfo.1.in
---- pinfo-0.6.8.orig/doc/pinfo.1.in	Thu Aug 21 11:18:00 2003
-+++ pinfo-0.6.8/doc/pinfo.1.in	Thu Oct 16 07:50:39 2003
-@@ -132,7 +132,7 @@
+diff -ur pinfo-0.6.9.org/doc/pinfo.1.in pinfo-0.6.9/doc/pinfo.1.in
+--- pinfo-0.6.9.org/doc/pinfo.1.in	2006-03-09 21:54:33.000000000 +0100
++++ pinfo-0.6.9/doc/pinfo.1.in	2006-03-18 19:21:54.319546500 +0100
+@@ -133,7 +133,7 @@
  
  .SH COLOR AND KEY DEFINITIONS
  .P
@@ -22,10 +22,10 @@ diff -Nru pinfo-0.6.8.orig/doc/pinfo.1.in pinfo-0.6.8/doc/pinfo.1.in
  [prefix]/etc/pinforc, for local and global configuration (where prefix is the
  prefix of the directory, where pinfo is installed, i.e. /usr/local, or /).
  Here's an example of such a file; we'll discuss the contents below:
-diff -Nru pinfo-0.6.8.orig/doc/pinfo.info pinfo-0.6.8/doc/pinfo.info
---- pinfo-0.6.8.orig/doc/pinfo.info	Thu Aug 21 11:20:11 2003
-+++ pinfo-0.6.8/doc/pinfo.info	Thu Oct 16 07:51:51 2003
-@@ -173,8 +173,8 @@
+diff -ur pinfo-0.6.9.org/doc/pinfo.info pinfo-0.6.9/doc/pinfo.info
+--- pinfo-0.6.9.org/doc/pinfo.info	2006-03-16 17:28:00.000000000 +0100
++++ pinfo-0.6.9/doc/pinfo.info	2006-03-18 19:21:54.319546500 +0100
+@@ -174,8 +174,8 @@
  file::, and at the key descriptions, *Note Keys::. Keys available in
  manual viewer differ a bit from the keys available in info viewer.
  
@@ -36,10 +36,10 @@ diff -Nru pinfo-0.6.8.orig/doc/pinfo.info pinfo-0.6.8/doc/pinfo.info
  prefix is the prefix of the directory, where `pinfo' is installed, i.e.
  `/usr/local', or `/usr').
  
-diff -Nru pinfo-0.6.8.orig/doc/pinfo.texi pinfo-0.6.8/doc/pinfo.texi
---- pinfo-0.6.8.orig/doc/pinfo.texi	Thu Oct 16 07:41:25 2003
-+++ pinfo-0.6.8/doc/pinfo.texi	Thu Oct 16 07:52:47 2003
-@@ -201,8 +201,8 @@
+diff -ur pinfo-0.6.9.org/doc/pinfo.texi pinfo-0.6.9/doc/pinfo.texi
+--- pinfo-0.6.9.org/doc/pinfo.texi	2006-03-16 16:40:41.000000000 +0100
++++ pinfo-0.6.9/doc/pinfo.texi	2006-03-18 19:21:54.319546500 +0100
+@@ -202,8 +202,8 @@
  file}, and at the key descriptions, @xref{Keys}. Keys available in
  manual viewer differ a bit from the keys available in info viewer.
  
@@ -50,17 +50,17 @@ diff -Nru pinfo-0.6.8.orig/doc/pinfo.texi pinfo-0.6.8/doc/pinfo.texi
  prefix is the prefix of the directory, where @value{PROGRAM} is
  installed, i.e. @file{/usr/local}, or @file{/usr}).
  
-diff -Nru pinfo-0.6.8.orig/src/parse_config.c pinfo-0.6.8/src/parse_config.c
---- pinfo-0.6.8.orig/src/parse_config.c	Thu Aug 21 11:16:01 2003
-+++ pinfo-0.6.8/src/parse_config.c	Thu Oct 16 07:44:46 2003
-@@ -94,7 +94,9 @@
-   else
-     {
-       if (rcfile == NULL)
--	if (getenv ("HOME"))
-+  if (getenv ("HOME_ETC"))
-+	  home = strdup (getenv ("HOME_ETC"));
-+	else if (getenv ("HOME"))
- 	  home = strdup (getenv ("HOME"));
- 	else
- 	  home = 0;
+diff -ur pinfo-0.6.9.org/src/parse_config.c pinfo-0.6.9/src/parse_config.c
+--- pinfo-0.6.9.org/src/parse_config.c	2006-03-09 20:44:51.000000000 +0100
++++ pinfo-0.6.9/src/parse_config.c	2006-03-18 19:22:32.693944750 +0100
+@@ -118,7 +118,9 @@
+ 	{
+ 		if (rcfile == NULL)
+ 		{
+-			if (getenv("HOME"))
++			if (getenv ("HOME_ETC"))
++				home = strdup (getenv ("HOME_ETC"));
++			else if (getenv ("HOME"))
+ 				home = strdup(getenv("HOME"));
+ 			else
+ 				home = 0;
