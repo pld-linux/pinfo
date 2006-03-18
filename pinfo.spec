@@ -1,7 +1,4 @@
 #
-# TODO: update to 0.6.9
-# http://freshmeat.net/projects/pinfo/?branch_id=8107
-#
 Summary:	Lynx-style info browser
 Summary(es):	Visualizador de pАginas info y man
 Summary(pl):	Przegl╠darka info w stylu lynksa
@@ -9,26 +6,22 @@ Summary(pt_BR):	Visualizador de pАginas info e man
 Summary(ru):	Программа просмотра info- и man-документов в стиле lynx
 Summary(uk):	Програма перегляду info- та man-документ╕в у стил╕ lynx
 Name:		pinfo
-Version:	0.6.8
-Release:	5
-License:	GPL
+Version:	0.6.9
+Release:	1
+License:	GPL v2
 Group:		Applications/System
-Vendor:		Przemek Borys <pborys@dione.ids.pl>
-Source0:	http://dione.ids.pl/~pborys/software/pinfo/%{name}-%{version}.tar.gz
-# Source0-md5:	55feb4ebaa709b52bd00a15ed0fb52fb
+Source0:	https://alioth.debian.org/download.php/1498/%{name}-%{version}.tar.bz2
+# Source0-md5:	e0c788467945f5f97fbacad55863e5b8
 Source1:	%{name}.sh
 Source2:	%{name}.csh
 Patch0:		%{name}-amfix.patch
-Patch1:		%{name}-info.patch
-Patch2:		%{name}-po.patch
-Patch3:		%{name}-mkstemp.patch
-Patch4:		%{name}-home_etc.patch
-Patch5:		%{name}-sig11.patch
-URL:		http://dione.ids.pl/~pborys/software/pinfo/
+Patch1:		%{name}-home_etc.patch
+URL:		http://pinfo.alioth.debian.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	readline-devel
 BuildRequires:	texinfo
 Requires:	man-config
 Requires:	setup >= 2.4.6-2
@@ -62,14 +55,11 @@ Pinfo - це програма перегляду info-файл╕в та man-стор╕нок. ╥╖
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
 
 rm -f doc/pinfo.info
 
 %build
+CPPFLAGS="-I%{_includedir}/ncurses"
 %{__gettextize}
 %{__aclocal} -I macros
 %{__autoconf}
