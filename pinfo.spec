@@ -1,3 +1,7 @@
+#
+# TODO: update to 0.6.9
+# http://freshmeat.net/projects/pinfo/?branch_id=8107
+#
 Summary:	Lynx-style info browser
 Summary(es):	Visualizador de páginas info y man
 Summary(pl):	Przegl±darka info w stylu lynksa
