@@ -1,4 +1,3 @@
-#
 Summary:	Lynx-style info browser
 Summary(es):	Visualizador de páginas info y man
 Summary(pl):	Przegl±darka info w stylu lynksa
@@ -17,11 +16,11 @@ Source2:	%{name}.csh
 Patch0:		%{name}-amfix.patch
 Patch1:		%{name}-home_etc.patch
 URL:		http://pinfo.alioth.debian.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	ncurses-devel >= 5.0
-BuildRequires:	readline-devel
+BuildRequires:	readline-devel >= 4.0
 BuildRequires:	texinfo
 Requires:	man-config
 Requires:	setup >= 2.4.6-2
