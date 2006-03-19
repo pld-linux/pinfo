@@ -1,0 +1,79 @@
+--- pinfo-0.6.9/po/pl.po.orig	2006-03-16 17:28:00.000000000 +0100
++++ pinfo-0.6.9/po/pl.po	2006-03-19 20:08:29.910624250 +0100
+@@ -1,15 +1,17 @@
+-# pinfo polish language module
++# Polish translation for pinfo.
++#
++# Przemek Borys 1999-2005
++# Krzysztof Krzy¿aniak (eloy) 2005
+ #
+ # strings for the header-filter of info messages
+-# , fuzzy
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: pinfo-0.6.8\n"
++"Project-Id-Version: pinfo-0.6.9\n"
+ "Report-Msgid-Bugs-To: pinfo-devel@lists.alioth.debian.org\n"
+ "POT-Creation-Date: 2006-03-16 17:28+0100\n"
+-"PO-Revision-Date: 2005-09-29 21:59+0200\n"
+-"Last-Translator: Krzysztof Krzy¿aniak (eloy) <eloy@debian.org>\n"
+-"Language-Team:\n"
++"PO-Revision-Date: 2006-03-19 20:01+0100\n"
++"Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
++"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=ISO-8859-2\n"
+ "Content-Transfer-Encoding: 8bit\n"
+@@ -30,9 +32,9 @@
+ msgstr "Zakoñczono poszukiwanie tablicy tagów\n"
+ 
+ #: src/filehandling_functions.c:1212
+-#, fuzzy, c-format
++#, c-format
+ msgid "Error: could not open info file"
+-msgstr "B³ad: nie nie mo¿na otworzyæ pliku info"
++msgstr "B³±d: nie mo¿na otworzyæ pliku info"
+ 
+ #: src/mainfunction.c:144 src/manual.c:975
+ msgid "Are you sure you want to print?"
+@@ -60,7 +62,6 @@
+ # Regexp search messages
+ #
+ #: src/mainfunction.c:292 src/mainfunction.c:554 src/manual.c:1120
+-#, fuzzy
+ msgid "Enter regular expression: "
+ msgstr "Wprowad¼ wyra¿enie regularne: "
+ 
+@@ -106,7 +107,7 @@
+ #: src/manual.c:324
+ #, c-format
+ msgid "Error: No manual page found either.\n"
+-msgstr "B³ad: Nie ma równie¿ pasuj±cej strony podrêcznika man.\n"
++msgstr "B³±d: Nie ma równie¿ pasuj±cej strony podrêcznika man.\n"
+ 
+ # apropos:
+ #: src/manual.c:327
+@@ -132,9 +133,9 @@
+ #
+ # loading:
+ #: src/manual.c:456
+-#, fuzzy, c-format
++#, c-format
+ msgid "Error: No manual page found\n"
+-msgstr "B³ad: Nie znaleziono strony podrêcznika.\n"
++msgstr "B³±d: Nie znaleziono strony podrêcznika.\n"
+ 
+ #: src/manual.c:461
+ #, c-format
+@@ -209,9 +210,9 @@
+ msgstr "nie"
+ 
+ #: src/utils.c:720
+-#, fuzzy, c-format
++#, c-format
+ msgid "Couldn't open temporary file\n"
+-msgstr "Nie mo¿na otworzyæ pliku konfiguracyjnego!\n"
++msgstr "Nie mo¿na otworzyæ pliku tymczasowego\n"
+ 
+ #: src/video.c:61
+ msgid "File:"
