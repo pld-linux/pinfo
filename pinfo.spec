@@ -15,6 +15,8 @@ Source1:	%{name}.sh
 Source2:	%{name}.csh
 Patch0:		%{name}-amfix.patch
 Patch1:		%{name}-home_etc.patch
+Patch2:		%{name}-pl.po-update.patch
+Patch3:		%{name}-info.patch
 URL:		http://pinfo.alioth.debian.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -54,8 +56,10 @@ Pinfo - це програма перегляду info-файл╕в та man-стор╕нок. ╥╖
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
-rm -f doc/pinfo.info
+rm -f doc/pinfo.info po/stamp-po
 
 %build
 CPPFLAGS="-I%{_includedir}/ncurses"
