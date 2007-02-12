@@ -1,9 +1,9 @@
 Summary:	Lynx-style info browser
-Summary(es):	Visualizador de pАginas info y man
-Summary(pl):	Przegl╠darka info w stylu lynksa
-Summary(pt_BR):	Visualizador de pАginas info e man
-Summary(ru):	Программа просмотра info- и man-документов в стиле lynx
-Summary(uk):	Програма перегляду info- та man-документ╕в у стил╕ lynx
+Summary(es.UTF-8):   Visualizador de pц║ginas info y man
+Summary(pl.UTF-8):   Przeglд┘darka info w stylu lynksa
+Summary(pt_BR.UTF-8):   Visualizador de pц║ginas info e man
+Summary(ru.UTF-8):   п÷я─п╬пЁя─п╟п╪п╪п╟ п©я─п╬я│п╪п╬я┌я─п╟ info- п╦ man-п╢п╬п╨я┐п╪п╣п╫я┌п╬п╡ п╡ я│я┌п╦п╩п╣ lynx
+Summary(uk.UTF-8):   п÷я─п╬пЁя─п╟п╪п╟ п©п╣я─п╣пЁп╩я▐п╢я┐ info- я┌п╟ man-п╢п╬п╨я┐п╪п╣п╫я┌я√п╡ я┐ я│я┌п╦п╩я√ lynx
 Name:		pinfo
 Version:	0.6.9
 Release:	1
@@ -31,26 +31,26 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Pinfo is a curses based lynx-style info browser.
 
-%description -l es
-Visualizador de pАginas info y man.
+%description -l es.UTF-8
+Visualizador de pц║ginas info y man.
 
-%description -l pl
-Pinfo jest przegl╠dark╠ dokumentСw info podobn╠ do lynksa.
+%description -l pl.UTF-8
+Pinfo jest przeglд┘darkд┘ dokumentцЁw info podobnд┘ do lynksa.
 
-%description -l pt_BR
-Visualizador hipertexto de arquivos info e pАginas de manual, com
-interface semelhante ao lynx. Suporta pesquisa de expressУes
+%description -l pt_BR.UTF-8
+Visualizador hipertexto de arquivos info e pц║ginas de manual, com
+interface semelhante ao lynx. Suporta pesquisa de expressц╣es
 regulares.
 
-%description -l ru
-Pinfo - это программа просмотра info-файлов и man-страниц. Ее
-интерфейс пользователя похож на интерфейс Lynx. Поддерживается поиск
-по регулярным выражениям.
+%description -l ru.UTF-8
+Pinfo - я█я┌п╬ п©я─п╬пЁя─п╟п╪п╪п╟ п©я─п╬я│п╪п╬я┌я─п╟ info-я└п╟п╧п╩п╬п╡ п╦ man-я│я┌я─п╟п╫п╦я├. п∙п╣
+п╦п╫я┌п╣я─я└п╣п╧я│ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п©п╬я┘п╬п╤ п╫п╟ п╦п╫я┌п╣я─я└п╣п╧я│ Lynx. п÷п╬п╢п╢п╣я─п╤п╦п╡п╟п╣я┌я│я▐ п©п╬п╦я│п╨
+п©п╬ я─п╣пЁя┐п╩я▐я─п╫я▀п╪ п╡я▀я─п╟п╤п╣п╫п╦я▐п╪.
 
-%description -l uk
-Pinfo - це програма перегляду info-файл╕в та man-стор╕нок. ╥╖
-╕нтерфейс под╕бний до ╕нтерфейсу Lynx. П╕дтриму╓ться пошук по
-регулярним виразам.
+%description -l uk.UTF-8
+Pinfo - я├п╣ п©я─п╬пЁя─п╟п╪п╟ п©п╣я─п╣пЁп╩я▐п╢я┐ info-я└п╟п╧п╩я√п╡ я┌п╟ man-я│я┌п╬я─я√п╫п╬п╨. п┤я≈
+я√п╫я┌п╣я─я└п╣п╧я│ п©п╬п╢я√п╠п╫п╦п╧ п╢п╬ я√п╫я┌п╣я─я└п╣п╧я│я┐ Lynx. п÷я√п╢я┌я─п╦п╪я┐я■я┌я▄я│я▐ п©п╬я┬я┐п╨ п©п╬
+я─п╣пЁя┐п╩я▐я─п╫п╦п╪ п╡п╦я─п╟п╥п╟п╪.
 
 %prep
 %setup -q
