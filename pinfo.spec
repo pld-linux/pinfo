@@ -1,9 +1,9 @@
 Summary:	Lynx-style info browser
-Summary(es.UTF-8):   Visualizador de páginas info y man
-Summary(pl.UTF-8):   Przeglądarka info w stylu lynksa
-Summary(pt_BR.UTF-8):   Visualizador de páginas info e man
-Summary(ru.UTF-8):   Программа просмотра info- и man-документов в стиле lynx
-Summary(uk.UTF-8):   Програма перегляду info- та man-документів у стилі lynx
+Summary(es.UTF-8):	Visualizador de páginas info y man
+Summary(pl.UTF-8):	Przeglądarka info w stylu lynksa
+Summary(pt_BR.UTF-8):	Visualizador de páginas info e man
+Summary(ru.UTF-8):	Программа просмотра info- и man-документов в стиле lynx
+Summary(uk.UTF-8):	Програма перегляду info- та man-документів у стилі lynx
 Name:		pinfo
 Version:	0.6.9
 Release:	1
