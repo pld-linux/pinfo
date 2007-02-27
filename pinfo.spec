@@ -6,7 +6,7 @@ Summary(ru.UTF-8):	Программа просмотра info- и man-докум
 Summary(uk.UTF-8):	Програма перегляду info- та man-документів у стилі lynx
 Name:		pinfo
 Version:	0.6.9
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/System
 Source0:	https://alioth.debian.org/download.php/1498/%{name}-%{version}.tar.bz2
@@ -17,6 +17,7 @@ Patch0:		%{name}-amfix.patch
 Patch1:		%{name}-home_etc.patch
 Patch2:		%{name}-pl.po-update.patch
 Patch3:		%{name}-info.patch
+Patch4:		%{name}-ncurses.patch
 URL:		http://pinfo.alioth.debian.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -58,6 +59,7 @@ Pinfo - це програма перегляду info-файлів та man-ст
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 rm -f doc/pinfo.info po/stamp-po
 
