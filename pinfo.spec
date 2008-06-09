@@ -27,6 +27,7 @@ BuildRequires:	readline-devel >= 4.0
 BuildRequires:	texinfo
 Requires:	man-config
 Requires:	setup >= 2.4.6-2
+Suggests:	man
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
