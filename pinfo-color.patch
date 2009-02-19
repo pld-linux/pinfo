@@ -1,0 +1,11 @@
+--- pinfo-0.6.9/src/parse_config.c.stary	2009-02-19 20:48:09.000000000 +0100
++++ pinfo-0.6.9/src/parse_config.c	2009-02-19 20:51:32.000000000 +0100
+@@ -816,6 +816,8 @@ parse_line(char *line)
+ 				*p = BOLD;
+ 			else if (!(strncmp(temp, "NO_BLINK", 7)))
+ 				*p = 0;
++			else if (!(strncmp(temp, "COLOR", 5)))
++				*p = atoi(temp + 5);
+ 			else
+ 				return 1;
+ 		}
