@@ -12,3 +12,15 @@
  
  if HAS_READLINE
  else
+diff -urN pinfo-0.6.9.org/configure.ac pinfo-0.6.9/configure.ac
+--- pinfo-0.6.9.org/configure.ac	2006-03-16 17:27:08.000000000 +0100
++++ pinfo-0.6.9/configure.ac	2009-11-10 08:52:01.572442899 +0100
+@@ -222,7 +222,7 @@
+ ## TODO: have this put in config.h instead of passing it on the command line
+ CPPFLAGS="$CPPFLAGS -DCONFIGDIR=\\\"${sysconfdir}/pinforc\\\" -DLOCALEDIR=\\\"${LOCALEDIR}\\\""
+ ## TODO: looks evil
+-MANDIR="`eval MANDIR=$mandir;echo $MANDIR|sed -e \"s#NONE#$ac_default_prefix#\"`"
++MANDIR=`eval MANDIR=$mandir;echo $MANDIR|sed -e "s#NONE#$ac_default_prefix#"`
+ 
+ 
+ 

@@ -5,7 +5,7 @@
  			AC_MSG_RESULT([$1/$2])
  			curses_h="$2"
 -			curses_libs="$3"
-+			curses_libs="$3 -ltinfo"
++			curses_libs="$3 -ltinfow"
  			curses_includes="$4"
  			stop_searching=true
  			found_curses_h=true
