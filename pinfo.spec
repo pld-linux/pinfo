@@ -6,7 +6,7 @@ Summary(ru.UTF-8):	Программа просмотра info- и man-докум
 Summary(uk.UTF-8):	Програма перегляду info- та man-документів у стилі lynx
 Name:		pinfo
 Version:	0.6.9
-Release:	8
+Release:	9
 License:	GPL v2
 Group:		Applications/System
 Source0:	https://alioth.debian.org/download.php/1498/%{name}-%{version}.tar.bz2
@@ -27,7 +27,6 @@ BuildRequires:	libtool
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel >= 4.0
 BuildRequires:	texinfo
-Requires:	man-config
 Requires:	setup >= 2.4.6-2
 Suggests:	man
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
