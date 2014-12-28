@@ -22,7 +22,7 @@ Patch5:		%{name}-color.patch
 URL:		http://pinfo.alioth.debian.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel >= 4.0
