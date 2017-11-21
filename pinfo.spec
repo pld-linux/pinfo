@@ -102,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS AUTHORS README
 %attr(755,root,root) %{_bindir}/pinfo
-/etc/shrc.d/*
+%config(noreplace) %verify(not md5 mtime size) /etc/shrc.d/*
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/pinforc
 %{_mandir}/man1/*
 %{_infodir}/pinfo*
