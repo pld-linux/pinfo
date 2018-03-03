@@ -5,12 +5,13 @@ Summary(pt_BR.UTF-8):	Visualizador de páginas info e man
 Summary(ru.UTF-8):	Программа просмотра info- и man-документов в стиле lynx
 Summary(uk.UTF-8):	Програма перегляду info- та man-документів у стилі lynx
 Name:		pinfo
-Version:	0.6.9
-Release:	10
+Version:	0.6.10
+Release:	1
 License:	GPL v2
 Group:		Applications/System
-Source0:	https://alioth.debian.org/download.php/1498/%{name}-%{version}.tar.bz2
-# Source0-md5:	e0c788467945f5f97fbacad55863e5b8
+#Source0Download: https://github.com/baszoetekouw/pinfo/releases
+Source0:	https://github.com/baszoetekouw/pinfo/archive/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	de82923e08cac4940d8c91770cc1ff63
 Source1:	%{name}.sh
 Source2:	%{name}.csh
 Patch0:		%{name}-amfix.patch
@@ -19,7 +20,7 @@ Patch2:		%{name}-pl.po-update.patch
 Patch3:		%{name}-info.patch
 Patch4:		%{name}-ncurses.patch
 Patch5:		%{name}-color.patch
-URL:		http://pinfo.alioth.debian.org/
+URL:		https://github.com/baszoetekouw/pinfo
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	gettext-tools
@@ -64,8 +65,6 @@ Pinfo - це програма перегляду info-файлів та man-ст
 %patch4 -p1
 %patch5 -p1
 
-rm -f doc/pinfo.info po/stamp-po
-
 %build
 CPPFLAGS="-I%{_includedir}/ncursesw"
 %{__gettextize}
@@ -92,17 +91,17 @@ install %{SOURCE2} $RPM_BUILD_ROOT/etc/shrc.d/%{name}.csh
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p	/sbin/postshell
+%post	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun	-p	/sbin/postshell
+%postun	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS AUTHORS README
 %attr(755,root,root) %{_bindir}/pinfo
-%config(noreplace) %verify(not md5 mtime size) /etc/shrc.d/*
+%config(noreplace) %verify(not md5 mtime size) /etc/shrc.d/pinfo.*
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/pinforc
-%{_mandir}/man1/*
-%{_infodir}/pinfo*
+%{_mandir}/man1/pinfo.1*
+%{_infodir}/pinfo.info*

@@ -1,16 +1,3 @@
-diff -ur pinfo-0.6.9.org/doc/pinfo.1 pinfo-0.6.9/doc/pinfo.1
---- pinfo-0.6.9.org/doc/pinfo.1	2006-03-16 17:27:56.000000000 +0100
-+++ pinfo-0.6.9/doc/pinfo.1	2006-03-18 19:21:54.315546250 +0100
-@@ -133,7 +133,7 @@
- 
- .SH COLOR AND KEY DEFINITIONS
- .P
--There are configuration files called ~/.pinforc and
-+There are configuration files called $HOME_ETC/.pinforc or ~/.pinforc and
- [prefix]/etc/pinforc, for local and global configuration (where prefix is the
- prefix of the directory, where pinfo is installed, i.e. /usr/local, or /).
- Here's an example of such a file; we'll discuss the contents below:
-diff -ur pinfo-0.6.9.org/doc/pinfo.1.in pinfo-0.6.9/doc/pinfo.1.in
 --- pinfo-0.6.9.org/doc/pinfo.1.in	2006-03-09 21:54:33.000000000 +0100
 +++ pinfo-0.6.9/doc/pinfo.1.in	2006-03-18 19:21:54.319546500 +0100
 @@ -133,7 +133,7 @@
@@ -22,21 +9,6 @@ diff -ur pinfo-0.6.9.org/doc/pinfo.1.in pinfo-0.6.9/doc/pinfo.1.in
  [prefix]/etc/pinforc, for local and global configuration (where prefix is the
  prefix of the directory, where pinfo is installed, i.e. /usr/local, or /).
  Here's an example of such a file; we'll discuss the contents below:
-diff -ur pinfo-0.6.9.org/doc/pinfo.info pinfo-0.6.9/doc/pinfo.info
---- pinfo-0.6.9.org/doc/pinfo.info	2006-03-16 17:28:00.000000000 +0100
-+++ pinfo-0.6.9/doc/pinfo.info	2006-03-18 19:21:54.319546500 +0100
-@@ -174,8 +174,8 @@
- file::, and at the key descriptions, *Note Keys::. Keys available in
- manual viewer differ a bit from the keys available in info viewer.
- 
--   There are configuration files called `~/.pinforc' and
--`[prefix]/etc/pinforc', for local and global configuration (where
-+   There are configuration files called `$HOME_ETC/.pinforc' or `~/.pinforc'
-+and `[prefix]/etc/pinforc', for local and global configuration (where
- prefix is the prefix of the directory, where `pinfo' is installed, i.e.
- `/usr/local', or `/usr').
- 
-diff -ur pinfo-0.6.9.org/doc/pinfo.texi pinfo-0.6.9/doc/pinfo.texi
 --- pinfo-0.6.9.org/doc/pinfo.texi	2006-03-16 16:40:41.000000000 +0100
 +++ pinfo-0.6.9/doc/pinfo.texi	2006-03-18 19:21:54.319546500 +0100
 @@ -202,8 +202,8 @@
