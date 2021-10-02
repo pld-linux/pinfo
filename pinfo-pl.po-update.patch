@@ -1,182 +1,109 @@
---- pinfo-0.6.10/po/pl.po.orig	2010-09-19 15:20:39.000000000 +0200
-+++ pinfo-0.6.10/po/pl.po	2018-03-03 21:44:04.583950676 +0100
-@@ -1,15 +1,19 @@
+--- pinfo-0.6.13/po/pl.po.orig	2021-10-01 21:11:16.421257367 +0200
++++ pinfo-0.6.13/po/pl.po	2021-10-01 22:29:33.735809832 +0200
+@@ -1,15 +1,17 @@
 -# pinfo polish language module
 +# Polish translation for pinfo.
 +#
 +# Przemek Borys 1999-2005
 +# Krzysztof Krzy¿aniak (eloy) 2005
-+# Jakub Bogusz 2006-2018
++# Jakub Bogusz 2006-2021
  #
- # strings for the header-filter of info messages
+-# strings for the header-filter of info messages
 -# , fuzzy
  msgid ""
  msgstr ""
 -"Project-Id-Version: pinfo-0.6.8\n"
-+"Project-Id-Version: pinfo-0.6.10\n"
++"Project-Id-Version: pinfo-0.6.13\n"
  "Report-Msgid-Bugs-To: pinfo-devel@lists.alioth.debian.org\n"
--"POT-Creation-Date: 2006-03-15 23:04+0100\n"
+ "POT-Creation-Date: 2019-02-06 13:30+0100\n"
 -"PO-Revision-Date: 2005-09-29 21:59+0200\n"
--"Last-Translator: Krzysztof Krzy¿aniak (eloy) <eloy@debian.org>\n"
+-"Last-Translator: Krzysztof KrzyÅ¼aniak (eloy) <eloy@debian.org>\n"
 -"Language-Team:\n"
-+"POT-Creation-Date: 2018-03-03 21:42+0100\n"
-+"PO-Revision-Date: 2018-02-03 21:44+0100\n"
++"PO-Revision-Date: 2021-10-01 21:59+0200\n"
 +"Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 +"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
-+"Language: pl\n"
+ "Language: pl\n"
  "MIME-Version: 1.0\n"
- "Content-Type: text/plain; charset=ISO-8859-2\n"
- "Content-Transfer-Encoding: 8bit\n"
-@@ -29,68 +33,67 @@
- msgid "Searching for tag table done\n"
- msgstr "Zakoñczono poszukiwanie tablicy tagów\n"
+ "Content-Type: text/plain; charset=utf-8\n"
+@@ -33,21 +35,20 @@ msgstr "ZakoÅ„czono poszukiwanie tablicy
+ #: src/filehandling_functions.c:708
+ #, c-format
+ msgid "Error while reading file '%s'"
+-msgstr ""
++msgstr "BÅ‚Ä…d podczas odczytu pliku '%s'"
  
--#: src/filehandling_functions.c:1211
+ #: src/filehandling_functions.c:1129
+-#, fuzzy
+ msgid "Can't open file"
+-msgstr "Nie moÅ¼na otworzyÄ‡ pliku konfiguracyjnego!\n"
++msgstr "Nie moÅ¼na otworzyÄ‡ pliku"
+ 
+ #: src/filehandling_functions.c:1130 src/pinfo.c:426
+ msgid "press a key to continue"
+ msgstr "naciÅ›nij dowolny klawisz"
+ 
+ #: src/filehandling_functions.c:1248
 -#, fuzzy, c-format
-+#: src/filehandling_functions.c:1212
 +#, c-format
- msgid "Error: could not open info file"
--msgstr "B³ad: nie nie mo¿na otworzyæ pliku info"
-+msgstr "B³±d: nie mo¿na otworzyæ pliku info"
+ msgid "Error: could not open info file part"
+-msgstr "BÅ‚ad: nie nie moÅ¼na otworzyÄ‡ pliku info"
++msgstr "BÅ‚ad: nie nie moÅ¼na otworzyÄ‡ czÄ™Å›ci pliku info"
  
--#: src/mainfunction.c:143 src/manual.c:975
-+#: src/mainfunction.c:144 src/manual.c:975
+ #: src/mainfunction.c:168 src/manual.c:1005
  msgid "Are you sure you want to print?"
- msgstr "Czy na pewno drukowaæ?"
- 
- #
- # Go line messages
- #
--#: src/mainfunction.c:195 src/manual.c:1020
-+#: src/mainfunction.c:196 src/manual.c:1020
- msgid "Enter line: "
- msgstr "Podaj liniê: "
- 
- #
- # Shellfeed messages
- #
--#: src/mainfunction.c:236 src/manual.c:1067
-+#: src/mainfunction.c:237 src/manual.c:1067
- msgid "Enter command: "
- msgstr "Podaj komendê: "
- 
--#: src/mainfunction.c:255
-+#: src/mainfunction.c:256
- msgid "Operation failed..."
- msgstr "Operacja siê nie powiod³a..."
- 
- #
+@@ -75,7 +76,6 @@ msgstr "Operacja siÄ™ nie powiodÅ‚a..."
  # Regexp search messages
  #
--#: src/mainfunction.c:291 src/mainfunction.c:553 src/manual.c:1120
+ #: src/mainfunction.c:316 src/mainfunction.c:575 src/manual.c:1150
 -#, fuzzy
-+#: src/mainfunction.c:292 src/mainfunction.c:554 src/manual.c:1120
  msgid "Enter regular expression: "
- msgstr "Wprowad¼ wyra¿enie regularne: "
+ msgstr "WprowadÅº wyraÅ¼enie regularne: "
  
--#: src/mainfunction.c:523 src/mainfunction.c:621 src/manual.c:1198
-+#: src/mainfunction.c:524 src/mainfunction.c:622 src/manual.c:1198
- msgid "Search string not found..."
- msgstr "Szukany ³añcuch nie zosta³ znaleziony..."
- 
--#: src/mainfunction.c:580 src/manual.c:1155
-+#: src/mainfunction.c:581 src/manual.c:1155
- msgid "Invalid regular expression;"
- msgstr "B³êdne wyra¿enie regularne;"
- 
--#: src/mainfunction.c:582 src/manual.c:1157
-+#: src/mainfunction.c:583 src/manual.c:1157
- msgid "Press any key to continue..."
- msgstr "Naci¶nij dowolny klawisz..."
- 
- #
- # Goto messages
- #
--#: src/mainfunction.c:650
-+#: src/mainfunction.c:651
- msgid "Enter node name: "
- msgstr "Podaj nazwê wêz³a: "
- 
- # , c-format
--#: src/mainfunction.c:726
-+#: src/mainfunction.c:727
- #, c-format
- msgid "Node %s not found"
- msgstr "Wêze³ %s nie istnieje"
- 
- # Dialogs
--#: src/mainfunction.c:1184 src/manual.c:1548
-+#: src/mainfunction.c:1185 src/manual.c:1548
- msgid "Are you sure you want to quit?"
- msgstr "Czy na pewno chcesz zakoñczyæ pracê?"
- 
-@@ -106,7 +109,7 @@
- #: src/manual.c:324
- #, c-format
- msgid "Error: No manual page found either.\n"
--msgstr "B³ad: Nie ma równie¿ pasuj±cej strony podrêcznika man.\n"
-+msgstr "B³±d: Nie ma równie¿ pasuj±cej strony podrêcznika man.\n"
- 
- # apropos:
- #: src/manual.c:327
-@@ -132,9 +135,9 @@
+@@ -147,9 +147,9 @@ msgstr "IGNOROWANIE"
  #
  # loading:
- #: src/manual.c:456
+ #: src/manual.c:486
 -#, fuzzy, c-format
 +#, c-format
  msgid "Error: No manual page found\n"
--msgstr "B³ad: Nie znaleziono strony podrêcznika.\n"
-+msgstr "B³±d: Nie znaleziono strony podrêcznika.\n"
+-msgstr "BÅ‚ad: Nie znaleziono strony podrÄ™cznika.\n"
++msgstr "BÅ‚Ä…d: Nie znaleziono strony podrÄ™cznika\n"
  
- #: src/manual.c:461
+ #: src/manual.c:491
  #, c-format
-@@ -153,7 +156,7 @@
- msgid "Enter manual name: "
- msgstr "Podaj tytu³ podrêcznika: "
+@@ -205,7 +205,7 @@ msgstr "Brak pamiÄ™ci\n"
+ #: src/utils.c:214
+ #, c-format
+ msgid "Failed to execute command '%s': %i"
+-msgstr ""
++msgstr "Nie udaÅ‚o siÄ™ uruchomiÄ‡ polecenia '%s': %i"
  
--#: src/manual.c:1631 src/video.c:114
-+#: src/manual.c:1631 src/video.c:115
- #, c-format
- msgid "Viewing line %d/%d, %d%%"
- msgstr "Przegl±danie linii %d/%d, %d%%"
-@@ -161,7 +164,7 @@
  #
- # Viewer messages
- #
--#: src/manual.c:1633 src/video.c:116
-+#: src/manual.c:1633 src/video.c:117
- #, c-format
- msgid "Viewing line %d/%d, 100%%"
- msgstr "Przegl±danie linii %d/%d, 100%%"
-@@ -174,7 +177,7 @@
- #
- # Messages from the config file parsing procedures:
- #
--#: src/parse_config.c:163
-+#: src/parse_config.c:165
- #, c-format
- msgid "Parse error in config file on line %d\n"
- msgstr "B³±d sk³adni w linii %d pliku konfiguracyjnego\n"
-@@ -200,14 +203,19 @@
- "W nazwie pliku znajduj± siê niedozwolone znaki!\n"
- "*** %s\n"
- 
--#: src/utils.c:451
-+#: src/utils.c:456
- msgid "yes"
- msgstr "tak"
- 
--#: src/utils.c:452
-+#: src/utils.c:457
- msgid "no"
+ # Message for procedure, which checks the command line filename
+@@ -229,9 +229,9 @@ msgid "no"
  msgstr "nie"
  
-+#: src/utils.c:733
+ #: src/utils.c:861
+-#, fuzzy, c-format
 +#, c-format
-+msgid "Couldn't open temporary file\n"
-+msgstr "Nie mo¿na otworzyæ pliku tymczasowego!\n"
-+
- #: src/video.c:61
+ msgid "Couldn't open temporary file\n"
+-msgstr "Nie moÅ¼na otworzyÄ‡ pliku konfiguracyjnego!\n"
++msgstr "Nie moÅ¼na otworzyÄ‡ pliku tymczasowego\n"
+ 
+ #: src/video.c:59
  msgid "File:"
- msgstr "Plik:"
+@@ -255,7 +255,7 @@ msgstr "GÃ³ra:"
+ 
+ #: src/video.c:297
+ msgid "Warning: matched empty string"
+-msgstr ""
++msgstr "Uwaga: dopasowano pusty Å‚aÅ„cuch"
+ 
+ #: src/pinfo.c:110 src/pinfo.c:195
+ #, c-format
+@@ -384,4 +384,4 @@ msgstr "NiebezpieczeÅ„stwo: Nie moÅ¼na p
+ #: src/pinfo.c:694
+ #, c-format
+ msgid "Unable to drop root privileges: %s"
+-msgstr ""
++msgstr "Nie udaÅ‚o siÄ™ odrzuciÄ‡ uprawnieÅ„ superuÅ¼ytkownika: %s"

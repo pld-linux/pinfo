@@ -1,0 +1,13 @@
+--- pinfo-0.6.13/configure.ac~	2019-02-16 21:23:32.000000000 +0100
++++ pinfo-0.6.13/configure.ac	2021-10-01 22:32:49.504749260 +0200
+@@ -155,8 +155,8 @@ fi
+ # the languages for which we have .po files
+ ALL_LINGUAS="cs de eu ja nl pl pt_BR ro ru sv vi"
+ 
+-# Checks for all prerequisites of the intl subdirectory
+-AM_INTL_SUBDIR
++AC_CHECK_HEADERS([locale.h])
++AC_CHECK_FUNCS([setlocale])
+ 
+ # gettext
+ AM_GNU_GETTEXT_VERSION([0.14.4])

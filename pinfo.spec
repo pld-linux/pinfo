@@ -5,20 +5,20 @@ Summary(pt_BR.UTF-8):	Visualizador de páginas info e man
 Summary(ru.UTF-8):	Программа просмотра info- и man-документов в стиле lynx
 Summary(uk.UTF-8):	Програма перегляду info- та man-документів у стилі lynx
 Name:		pinfo
-Version:	0.6.10
-Release:	2
+Version:	0.6.13
+Release:	1
 License:	GPL v2
 Group:		Applications/System
 #Source0Download: https://github.com/baszoetekouw/pinfo/releases
-Source0:	https://github.com/baszoetekouw/pinfo/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	de82923e08cac4940d8c91770cc1ff63
+Source0:	https://github.com/baszoetekouw/pinfo/archive/v%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	b2671c8f6ef0aa5d7c6460c3111e2f50
 Source1:	%{name}.sh
 Source2:	%{name}.csh
 Patch0:		%{name}-amfix.patch
 Patch1:		%{name}-home_etc.patch
 Patch2:		%{name}-pl.po-update.patch
 Patch3:		%{name}-info.patch
-Patch4:		%{name}-ncurses.patch
+Patch4:		%{name}-gettext.patch
 Patch5:		%{name}-color.patch
 URL:		https://github.com/baszoetekouw/pinfo
 BuildRequires:	autoconf >= 2.57
@@ -71,6 +71,7 @@ CPPFLAGS="-I%{_includedir}/ncursesw"
 %{__libtoolize}
 %{__aclocal} -I macros
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 
@@ -83,8 +84,8 @@ install -d $RPM_BUILD_ROOT/etc/shrc.d
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/shrc.d/%{name}.sh
-install %{SOURCE2} $RPM_BUILD_ROOT/etc/shrc.d/%{name}.csh
+cp -p %{SOURCE1} $RPM_BUILD_ROOT/etc/shrc.d/%{name}.sh
+cp -p %{SOURCE2} $RPM_BUILD_ROOT/etc/shrc.d/%{name}.csh
 
 %find_lang %{name}
 
@@ -99,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS AUTHORS README
+%doc AUTHORS NEWS README.md
 %attr(755,root,root) %{_bindir}/pinfo
 %config(noreplace) %verify(not md5 mtime size) /etc/shrc.d/pinfo.*
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/pinforc

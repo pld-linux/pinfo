@@ -1,26 +1,14 @@
---- pinfo-0.6.3/src/Makefile.am.orig	Sat Oct 20 14:56:33 2001
-+++ pinfo-0.6.3/src/Makefile.am	Sat Oct 20 14:58:10 2001
-@@ -67,11 +67,6 @@
- pinfo_LDADD = $(pinfo_READLINE_OBJ) $(pinfo_SNPRINTF_OBJ)\
-               $(pinfo_SIGBLOCK_OBJ) @READLINE_LIBS@ $(INTLLIBS)
+--- pinfo-0.6.13/src/Makefile.am.orig	2021-10-01 21:09:56.178358747 +0200
++++ pinfo-0.6.13/src/Makefile.am	2021-10-01 21:10:29.424845302 +0200
+@@ -68,11 +68,6 @@ pinfo_CFLAGS = $(CURSES_CFLAGS) $(WCHAR_
+ 	$(READLINE_INCLUDES) $(WFLAGS) \
+ 	-DLOCALEDIR=\"$(LOCALEDIR)\" -DCONFIGDIR=\"$(sysconfdir)/pinforc\"
  
 -pinfo_DEPENDENCIES = $(pinfo_READLINE_OBJ)\
 -                     $(pinfo_SNPRINTF_OBJ)\
 -                     $(pinfo_SIGBLOCK_OBJ)\
--		     $(INTLDEPS)
+-                     $(INTLDEPS)
 -
  
  if HAS_READLINE
  else
-diff -urN pinfo-0.6.9.org/configure.ac pinfo-0.6.9/configure.ac
---- pinfo-0.6.9.org/configure.ac	2006-03-16 17:27:08.000000000 +0100
-+++ pinfo-0.6.9/configure.ac	2009-11-10 08:52:01.572442899 +0100
-@@ -222,7 +222,7 @@
- ## TODO: have this put in config.h instead of passing it on the command line
- CPPFLAGS="$CPPFLAGS -DCONFIGDIR=\\\"${sysconfdir}/pinforc\\\" -DLOCALEDIR=\\\"${LOCALEDIR}\\\""
- ## TODO: looks evil
--MANDIR="`eval MANDIR=$mandir;echo $MANDIR|sed -e \"s#NONE#$ac_default_prefix#\"`"
-+MANDIR=`eval MANDIR=$mandir;echo $MANDIR|sed -e "s#NONE#$ac_default_prefix#"`
- 
- 
- 
