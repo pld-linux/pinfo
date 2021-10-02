@@ -1,0 +1,11 @@
+--- pinfo-0.6.13/src/parse_config.h.orig	2019-02-16 21:23:32.000000000 +0100
++++ pinfo-0.6.13/src/parse_config.h	2021-10-02 21:41:54.698502930 +0200
+@@ -85,7 +85,7 @@ typedef struct colours
+ colours;
+ #endif /* HAVE_CURSES_COLOR */
+ 
+-int use_manual;
++extern int use_manual;
+ 
+ int parse_config (void);
+ int parse_line (char *line);

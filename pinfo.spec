@@ -20,6 +20,7 @@ Patch2:		%{name}-pl.po-update.patch
 Patch3:		%{name}-info.patch
 Patch4:		%{name}-gettext.patch
 Patch5:		%{name}-color.patch
+Patch6:		%{name}-no-common.patch
 URL:		https://github.com/baszoetekouw/pinfo
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -64,6 +65,7 @@ Pinfo - це програма перегляду info-файлів та man-ст
 %patch3 -p1
 %patch4 -p1
 %patch5 -p1
+%patch6 -p1
 
 %build
 CPPFLAGS="-I%{_includedir}/ncursesw"
