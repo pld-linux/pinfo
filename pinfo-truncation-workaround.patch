@@ -1,0 +1,26 @@
+gcc's -Werror=stringop-truncation tries to be too smart, but actually it isn't.
+Take len just after initialization, before call to mkstemp() (which doesn't change string length);
+now gcc doesn't complain.
+
+--- pinfo-0.6.13/src/utils.c.orig	2019-02-16 21:23:32.000000000 +0100
++++ pinfo-0.6.13/src/utils.c	2021-10-03 07:45:00.428038370 +0200
+@@ -848,10 +848,10 @@ char *
+ make_tempfile()
+ {
+ 	char *filename;
+-	size_t len;
+ 
+ 	/* TODO: fix hardcoded /tmp */
+ 	char tmpfile_template[] = "/tmp/pinfo.XXXXXX";
++	size_t len = strlen(tmpfile_template)+1;
+ 
+ 	/* create a tmpfile */
+ 	int fd = mkstemp(tmpfile_template);
+@@ -864,7 +864,6 @@ make_tempfile()
+ 	}
+ 
+ 	/* allocate a new string and copy the filename there */
+-	len = strlen(tmpfile_template)+1;
+ 	filename = xmalloc(len+1); /* guarenteerd to be set to \0's */
+ 	strncpy(filename, tmpfile_template, len);
+ 

@@ -6,7 +6,7 @@ Summary(ru.UTF-8):	Программа просмотра info- и man-докум
 Summary(uk.UTF-8):	Програма перегляду info- та man-документів у стилі lynx
 Name:		pinfo
 Version:	0.6.13
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/System
 #Source0Download: https://github.com/baszoetekouw/pinfo/releases
@@ -21,6 +21,7 @@ Patch3:		%{name}-info.patch
 Patch4:		%{name}-gettext.patch
 Patch5:		%{name}-color.patch
 Patch6:		%{name}-no-common.patch
+Patch7:		%{name}-truncation-workaround.patch
 URL:		https://github.com/baszoetekouw/pinfo
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -66,6 +67,7 @@ Pinfo - це програма перегляду info-файлів та man-ст
 %patch4 -p1
 %patch5 -p1
 %patch6 -p1
+%patch7 -p1
 
 %build
 CPPFLAGS="-I%{_includedir}/ncursesw"
